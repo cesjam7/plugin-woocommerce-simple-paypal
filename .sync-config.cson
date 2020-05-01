@@ -1,0 +1,25 @@
+remote:
+    host: "68.183.31.146"  # server name or ip or ssh host abbr in .ssh/config
+    user: "root"        # ssh username
+    path: "/mnt/alfa/www/dancefit.wpmico.com/html/wp-content/plugins/paypal-simple/"      # e.g. /home/someone/somewhere
+    port: "22"
+behaviour:
+  uploadOnSave: true
+  syncDownOnOpen: false
+  forgetConsole: false
+  autoHideConsole: true
+  alwaysSyncAll: false
+option:
+  deleteFiles: false
+  exclude: [
+    ".sync-config.cson"
+    ".git"
+    "node_modules"
+    "tmp"
+    "main.css.map"
+    "main.scss"
+    ".sass-cache"
+    "index.html"
+    "style.scss"
+    "cesar.scss"
+  ]
