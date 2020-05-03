@@ -103,6 +103,10 @@ function wc_offline_gateway_init() {
             if ( is_admin() ) return $available_gateways;
             if ( isset( $available_gateways['paypal_simple'] ) && WC()->customer->get_billing_country() == 'PE' ) {
                 unset( $available_gateways['paypal_simple'] );
+            } else {
+                unset( $available_gateways['bacs'] );
+                unset( $available_gateways['cheque'] );
+                unset( $available_gateways['cod'] );
             }
             return $available_gateways;
         }
