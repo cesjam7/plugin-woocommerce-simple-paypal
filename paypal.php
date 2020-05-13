@@ -86,8 +86,8 @@ function wc_offline_gateway_init() {
             );
         }
 
-        public function thankyou_page() {
-            if ( $this->instructions ) {
+        public function thankyou_page($var, $order) {
+            if ( $this->instructions && 'paypal_simple' === $order->payment_method && $order->has_status( 'on-hold' ) ) {
                 echo wpautop( wptexturize( $this->instructions ) );
             }
         }
